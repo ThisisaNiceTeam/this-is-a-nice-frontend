@@ -1,0 +1,45 @@
+@use "./globals.scss" as *;
+
+html[data-theme="light"] {
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-tertiary: #{$text-tertiary};
+  --text-accent: #{$text-accent};
+
+  --backgrount-primary: #{$background-primary};
+  --backgrount-secondary: #{$background-secondary};
+  --backgrount-accent: #{$background-accent};
+  --backgrount-select: #{$background-select};
+
+  --icon-primary: #{$icon-primary};
+  --icon-secondary: #{$icon-secondary};
+  --icon-accent: #{$icon-accent};
+
+  --outline-primary: #{$outline-primary};
+  --outline-secondary: #{$outline-secondary};
+
+  --button-primary: #{$button-primary};
+  --button-secondary: #{$button-secondary};
+}
+
+html[data-theme="dark"] {
+  --text-primary: #{$dark-text-primary};
+  --text-secondary: #{$dark-text-secondary};
+  --text-tertiary: #{$dark-text-tertiary};
+  --text-accent: #{$dark-text-accent};
+
+  --backgrount-primary: #{$dark-background-primary};
+  --backgrount-secondary: #{$dark-background-secondary};
+  --backgrount-accent: #{$dark-background-accent};
+  --backgrount-select: #{$dark-background-select};
+
+  --icon-primary: #{$dark-icon-primary};
+  --icon-secondary: #{$dark-icon-secondary};
+  --icon-accent: #{$dark-icon-accent};
+
+  --outline-primary: #{$dark-outline-primary};
+  --outline-secondary: #{$dark-outline-secondary};
+
+  --button-primary: #{$dark-button-primary};
+  --button-secondary: #{$dark-button-secondary};
+}
