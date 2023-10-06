@@ -10,6 +10,10 @@
   },
   "packageManager": "^pnpm@8.6.12",
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^11.11.0",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -21,6 +25,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
     "@typescript-eslint/eslint-plugin": "^6.4.1",
     "@typescript-eslint/parser": "^6.4.1",
     "eslint-config-airbnb": "^19.0.4",
