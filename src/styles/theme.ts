@@ -55,61 +55,68 @@ const button = {
   'secondary-dark': '#85868e',
 };
 
-const theme: Theme = {
+const lightTheme: Theme = {
   text: {
-    primaryLight: text['primary-light'],
-    primaryDark: text['primary-dark'],
-
-    secondaryLight: text['secondary-light'],
-    secondaryDark: text['secondary-dark'],
-
-    tertiaryLight: text['tertiary-light'],
-    tertiaryDark: text['tertiary-dark'],
-
-    accentLight: text['accent-light'],
-    accentDark: text['accent-dark'],
+    primary: text['primary-light'],
+    secondary: text['secondary-light'],
+    tertiary: text['tertiary-light'],
+    accent: text['accent-light'],
   },
 
   background: {
-    primaryLight: background['primary-light'],
-    primaryDark: background['primary-dark'],
-
-    secondaryLight: background['secondary-light'],
-    secondaryDark: background['secondary-dark'],
-
-    accentLight: background['accent-light'],
-    accentDark: background['accent-dark'],
-
-    selectLight: background['select-light'],
-    selectDark: background['select-dark'],
+    primary: background['primary-light'],
+    secondary: background['secondary-light'],
+    accent: background['accent-light'],
+    select: background['select-light'],
   },
 
   icon: {
-    primaryLight: icon['primary-light'],
-    primaryDark: icon['primary-dark'],
-
-    secondaryLight: icon['secondary-light'],
-    secondaryDark: icon['secondary-dark'],
-
-    accentLight: icon['accent-light'],
-    accentDark: icon['accent-dark'],
+    primary: icon['primary-light'],
+    secondary: icon['secondary-light'],
+    accent: icon['accent-light'],
   },
 
   outline: {
-    primaryLight: outline['primary-light'],
-    primaryDark: outline['primary-dark'],
-
-    secondaryLight: outline['secondary-light'],
-    secondaryDark: outline['secondary-dark'],
+    primary: outline['primary-light'],
+    secondary: outline['secondary-light'],
   },
 
   button: {
-    primaryLight: button['primary-light'],
-    primaryDark: button['primary-dark'],
-
-    secondaryLight: button['secondary-light'],
-    secondaryDark: button['secondary-dark'],
+    primary: button['primary-light'],
+    secondary: button['secondary-light'],
   },
 };
 
-export default theme;
+const darkTheme: Theme = {
+  text: {
+    primary: text['primary-dark'],
+    secondary: text['secondary-dark'],
+    tertiary: text['tertiary-dark'],
+    accent: text['accent-dark'],
+  },
+
+  background: {
+    primary: background['primary-dark'],
+    secondary: background['secondary-dark'],
+    accent: background['accent-dark'],
+    select: background['select-dark'],
+  },
+
+  icon: {
+    primary: icon['primary-dark'],
+    secondary: icon['secondary-dark'],
+    accent: icon['accent-dark'],
+  },
+
+  outline: {
+    primary: outline['primary-dark'],
+    secondary: outline['secondary-dark'],
+  },
+
+  button: {
+    primary: button['primary-dark'],
+    secondary: button['secondary-dark'],
+  },
+};
+
+export default { lightTheme, darkTheme };
