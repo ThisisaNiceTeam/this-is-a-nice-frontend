@@ -12,6 +12,7 @@
     "airbnb",
     "airbnb/hooks",
     "plugin:react/recommended",
+    "plugin:import/recommended",
     "plugin:jsx-a11y/recommended",
     "eslint-config-prettier",
     "next/core-web-vitals"
@@ -19,7 +20,7 @@
   "globals": {
     "NodeJS": true
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "import"],
   "env": {
     "browser": true,
     "jasmine": true,
@@ -30,7 +31,14 @@
       // Tells eslint-plugin-react to automatically detect the version of React to use.
       "version": "detect"
     },
-    "import/core-modules": ["@emotion/react", "@emotion/styled"],
+    "import/core-modules": [
+      "@emotion/react",
+      "@emotion/styled",
+      "@testing-library/react",
+      "@testing-library/jest-dom",
+      "@testing-library/user-event",
+      "@testing-library/react-hook"
+    ],
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
     "import/resolver": {
       "node": {
@@ -122,7 +130,7 @@
       "error",
       "ignorePackages",
       {
-        "js": "never",
+        // "js": "never",
         "jsx": "never",
         "ts": "never",
         "tsx": "never"
@@ -148,5 +156,5 @@
       }
     ]
   },
-  "globals": { "navigation": "readonly", "globalThis": false, "NodeJS": true }
+  "globals": { "navigation": "readonly", "globalThis": false, "NodeJS": true, "JSX": true }
 }
