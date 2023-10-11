@@ -30,7 +30,7 @@
       // Tells eslint-plugin-react to automatically detect the version of React to use.
       "version": "detect"
     },
-    "import/core-modules": ["@emotion/react"],
+    "import/core-modules": ["@emotion/react", "@emotion/styled"],
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
     "import/resolver": {
       "node": {
