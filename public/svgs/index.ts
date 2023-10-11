@@ -1,4 +1,3 @@
-import IconNext from './next.svg';
-import IconVercel from './vercel.svg';
+import Logo from './logo.svg';
 
-export { IconNext, IconVercel };
+export { Logo };
