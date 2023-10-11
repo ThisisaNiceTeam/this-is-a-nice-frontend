@@ -6,14 +6,16 @@ import { useRouter } from 'next/navigation';
 
 const Button = styled.button`
   display: flex;
+  align-items: center;
   border: 0;
   background-color: transparent;
   cursor: pointer;
 `;
 
 const SiteName = styled.p`
-  color: white;
   margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 0.938rem;
 `;
 
 const HomeButton = () => {

@@ -11,7 +11,7 @@ interface Props {
 }
 const Provider = ({ children }: Props) => {
   return (
-    <ThemeProvider theme={theme.darkTheme}>
+    <ThemeProvider theme={theme.lightTheme}>
       <GlobalStyle />
       {children}
     </ThemeProvider>

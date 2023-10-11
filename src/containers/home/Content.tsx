@@ -1,5 +1,16 @@
+'use client';
+
+import styled from '@emotion/styled';
+
+import theme from '@/styles/theme';
+
+const HomeElement = styled.div`
+  background-color: ${theme.lightTheme.text.accent};
+  height: 8000px;
+`;
+
 const HomeContent = () => {
-  return <div>This is Home Content</div>;
+  return <HomeElement>This is Home Content</HomeElement>;
 };
 
 export default HomeContent;
