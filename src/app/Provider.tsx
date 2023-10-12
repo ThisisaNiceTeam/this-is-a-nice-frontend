@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { ThemeProvider } from '@emotion/react';
+import { ThemeProvider } from 'next-themes';
 
 import theme from '@/styles/theme';
 import GlobalStyle from '@/styles/global';
@@ -11,10 +11,10 @@ interface Props {
 }
 const Provider = ({ children }: Props) => {
   return (
-    <ThemeProvider theme={theme.lightTheme}>
+    <>
       <GlobalStyle />
-      {children}
-    </ThemeProvider>
+      <ThemeProvider defaultTheme='light'>{children}</ThemeProvider>
+    </>
   );
 };
 
