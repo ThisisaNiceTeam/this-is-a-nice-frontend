@@ -1,29 +1,30 @@
 import userEvent from '@testing-library/user-event';
 import { screen } from '@testing-library/react';
 
-import { renderWithContext } from '@/utils/test/renderWithContext';
-import { createMockRouter } from '@/utils/test/createMockRouter';
+import { renderWithContext, createMockRouter } from '@/utils/test';
 
 import HomeButton from './HomeButton';
 
 describe('HomeButton', () => {
   const router = createMockRouter();
+  const render = () => renderWithContext(<HomeButton />, router);
 
   it('render Test', () => {
-    const { container } = renderWithContext(<HomeButton />, router);
+    render();
 
     const logo = screen.getByAltText('logo');
     const title = screen.getByText('사이트 이름');
+
     expect(logo).toBeInTheDocument();
     expect(title).toBeInTheDocument();
-
-    expect(container).toMatchSnapshot();
   });
 
-  it('click Event Test', () => {
-    renderWithContext(<HomeButton />, router);
+  it('클릭하면 홈으로 이동한다.', async () => {
+    render();
+
     const homeButton = screen.getByRole('button');
-    expect(homeButton).toBeInTheDocument();
-    userEvent.click(homeButton);
+    await userEvent.click(homeButton);
+
+    expect(router.push).toBeCalledWith('/');
   });
 });

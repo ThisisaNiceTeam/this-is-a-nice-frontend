@@ -1,6 +1,6 @@
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context';
 
-export function createMockRouter(router?: Partial<AppRouterInstance>): any {
+function createMockRouter(router?: Partial<AppRouterInstance>): any {
   return {
     basePath: '',
     pathname: '/',
@@ -27,3 +27,5 @@ export function createMockRouter(router?: Partial<AppRouterInstance>): any {
     ...router,
   };
 }
+
+export default createMockRouter;
