@@ -1,15 +1,16 @@
 'use client';
 
 import styled from '@emotion/styled';
-import Image from 'next/image';
 
 import HomeButton from '@/components/HomeButton';
+import ThemedButton from '@/components/ThemedButton';
 
 const HeaderWrapper = styled.div`
   width: 100vw;
   height: 60px;
   position: fixed;
-  background-color: white;
+  background-color: var(--text-tertiary);
+  color: var(--text-primary);
   display: flex;
   justify-content: center;
 `;
@@ -42,7 +43,7 @@ const Header = () => {
         <HomeButton />
         <RightElement>
           <SignIn>시작하기</SignIn>
-          <Image src='/svgs/themeButton.svg' alt='logo' width={20} height={20} />
+          <ThemedButton />
         </RightElement>
       </HeaderContent>
     </HeaderWrapper>
