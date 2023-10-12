@@ -22,8 +22,7 @@ describe('HomeButton', () => {
   it('클릭하면 홈으로 이동한다.', async () => {
     render();
 
-    const homeButton = screen.getByRole('button');
-    await userEvent.click(homeButton);
+    await userEvent.click(screen.getByRole('button'));
 
     expect(router.push).toBeCalledWith('/');
   });
