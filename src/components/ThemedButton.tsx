@@ -2,6 +2,10 @@ import { useTheme } from 'next-themes';
 import { DarkMode, LightMode } from '@emotion-icons/material';
 import { useEffect, useState } from 'react';
 
+const pointer = {
+  cursor: 'pointer',
+};
+
 const ThemedButton = () => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -18,9 +22,9 @@ const ThemedButton = () => {
   if (!mounted) return null;
 
   return theme === 'dark' ? (
-    <LightMode width={20} height={20} onClick={toggleTheme} data-testid='light-button' />
+    <LightMode width={20} height={20} onClick={toggleTheme} style={pointer} data-testid='light-button' />
   ) : (
-    <DarkMode width={20} height={20} onClick={toggleTheme} data-testid='dark-button' />
+    <DarkMode width={20} height={20} onClick={toggleTheme} style={pointer} data-testid='dark-button' />
   );
 };
 
