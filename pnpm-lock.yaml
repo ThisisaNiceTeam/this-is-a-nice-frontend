@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@emotion-icons/material':
+    specifier: ^3.14.0
+    version: 3.14.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
   '@emotion/babel-preset-css-prop':
     specifier: ^11.11.0
     version: 11.11.0(@babel/core@7.23.0)
@@ -1394,6 +1397,33 @@ packages:
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
+
+  /@emotion-icons/emotion-icon@4.1.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0):
+    resolution: {integrity: sha512-bOUbWj8DPjUK5MtRx2ApMudOnh/tasqJwa+sdRbqsZD0g0hYf0jCsTDNs/57VvGOJH2PfWDKD1jbLjwajAYT9A==}
+    peerDependencies:
+      '@emotion/react': '>=11.0.0 <12'
+      '@emotion/styled': '>=11.0.0 <12'
+      react: '*'
+    dependencies:
+      '@babel/runtime': 7.22.15
+      '@emotion/react': 11.11.1(@types/react@18.2.21)(react@18.2.0)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.21)(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
+  /@emotion-icons/material@3.14.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0):
+    resolution: {integrity: sha512-VQrlJReCLpdntuMhRFTEGNQUVHgCorpyXpiYvXTlNHZXlgiDg5qKTPl5JwHz+LLcDazTN5ND8SieG62BTq+mxg==}
+    peerDependencies:
+      '@emotion/react': '>=11.0.0 <12'
+      '@emotion/styled': '>=11.0.0 <12'
+      react: '*'
+    dependencies:
+      '@babel/runtime': 7.22.15
+      '@emotion-icons/emotion-icon': 4.1.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
+      '@emotion/react': 11.11.1(@types/react@18.2.21)(react@18.2.0)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.21)(react@18.2.0)
+      react: 18.2.0
+    dev: false
 
   /@emotion/babel-plugin-jsx-pragmatic@0.2.1(@babel/core@7.23.0):
     resolution: {integrity: sha512-xy1SlgEJygAAIvIuC2idkGKJYa6v5iwoyILkvNKgk347bV+IImXrUat5Z86EmLGyWhEoTplVT9EHqTnHZG4HFw==}

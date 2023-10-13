@@ -1,19 +1,19 @@
 import { useTheme } from 'next-themes';
-import styled from '@emotion/styled';
+import { DarkMode, LightMode } from '@emotion-icons/material';
+import { useEffect, useState } from 'react';
 
-import ThemeButton from '#/svgs/themeButton.svg';
-
-const ThemeButtonComponent = styled(ThemeButton)`
-  path {
-    fill: var(--text-primary);
-  }
-  cursor: pointer;
-`;
-
+// eslint-disable-next-line consistent-return
 const ThemedButton = () => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  return <ThemeButtonComponent width={20} height={20} onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} />;
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+  if (theme === 'light') return <DarkMode width={20} height={20} onClick={() => setTheme('dark')} />;
+  if (theme === 'dark') return <LightMode width={20} height={20} onClick={() => setTheme('light')} />;
 };
 
 export default ThemedButton;

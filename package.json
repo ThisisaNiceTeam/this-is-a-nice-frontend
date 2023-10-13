@@ -15,6 +15,7 @@
   },
   "packageManager": "^pnpm@8.6.12",
   "dependencies": {
+    "@emotion-icons/material": "^3.14.0",
     "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.11.1",
