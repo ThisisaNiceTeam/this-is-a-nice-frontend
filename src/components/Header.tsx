@@ -34,6 +34,7 @@ const RightElement = styled.div`
 
 const SignIn = styled.span`
   margin-right: 1rem;
+  cursor: pointer;
 `;
 
 const Header = () => {
