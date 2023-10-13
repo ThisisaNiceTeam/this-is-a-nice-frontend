@@ -18,6 +18,7 @@ const style = () => css`
     --bg-secondary: ${theme.darkTheme.background.secondary};
     --bg-accent: ${theme.darkTheme.background.accent};
     --bg-select: ${theme.darkTheme.background.select};
+    --bg-home: ${theme.darkTheme.background.home};
 
     --icon-primary: ${theme.darkTheme.icon.primary};
     --icon-secondary: ${theme.darkTheme.icon.secondary};
@@ -40,6 +41,7 @@ const style = () => css`
     --bg-secondary: ${theme.lightTheme.background.secondary};
     --bg-accent: ${theme.lightTheme.background.accent};
     --bg-select: ${theme.lightTheme.background.select};
+    --bg-home: ${theme.lightTheme.background.home};
 
     --icon-primary: ${theme.lightTheme.icon.primary};
     --icon-secondary: ${theme.lightTheme.icon.secondary};

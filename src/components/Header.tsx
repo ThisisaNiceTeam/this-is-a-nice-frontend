@@ -9,7 +9,7 @@ const HeaderWrapper = styled.div`
   width: 100vw;
   height: 60px;
   position: fixed;
-  background-color: var(--text-tertiary);
+  background-color: var(--bg-home);
   color: var(--text-primary);
   display: flex;
   justify-content: center;

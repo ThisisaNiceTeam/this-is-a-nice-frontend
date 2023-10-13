@@ -2,10 +2,8 @@
 
 import styled from '@emotion/styled';
 
-import theme from '@/styles/theme';
-
 const HomeElement = styled.div`
-  background-color: var(--bg-primary);
+  background-color: var(--bg-home);
   height: 8000px;
 `;
 
