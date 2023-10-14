@@ -22,9 +22,9 @@ const ThemedButton = () => {
   if (!mounted) return null;
 
   return theme === 'dark' ? (
-    <LightMode width={20} height={20} onClick={toggleTheme} style={pointer} data-testid='light-button' />
-  ) : (
     <DarkMode width={20} height={20} onClick={toggleTheme} style={pointer} data-testid='dark-button' />
+  ) : (
+    <LightMode width={20} height={20} onClick={toggleTheme} style={pointer} data-testid='light-button' />
   );
 };
 
