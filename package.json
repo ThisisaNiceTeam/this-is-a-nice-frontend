@@ -15,10 +15,12 @@
   },
   "packageManager": "^pnpm@8.6.12",
   "dependencies": {
+    "@emotion-icons/material": "^3.14.0",
     "@emotion/babel-preset-css-prop": "^11.11.0",
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -49,12 +51,12 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
-    "ts-jest": "^29.1.1",
-    "husky": "^8.0.0"
+    "ts-jest": "^29.1.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

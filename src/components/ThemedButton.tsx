@@ -1,17 +1,30 @@
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
+import { DarkMode, LightMode } from '@emotion-icons/material';
+import { useEffect, useState } from 'react';
+
+const pointer = {
+  cursor: 'pointer',
+};
 
 const ThemedButton = () => {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  return (
-    <Image
-      src='/svgs/themeButton.svg'
-      alt='themeButton'
-      width={20}
-      height={20}
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-    />
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleTheme = () => {
+    if (theme === 'light') setTheme('dark');
+    if (theme === 'dark') setTheme('light');
+  };
+
+  if (!mounted) return null;
+
+  return theme === 'dark' ? (
+    <LightMode width={20} height={20} onClick={toggleTheme} style={pointer} data-testid='light-button' />
+  ) : (
+    <DarkMode width={20} height={20} onClick={toggleTheme} style={pointer} data-testid='dark-button' />
   );
 };
 
