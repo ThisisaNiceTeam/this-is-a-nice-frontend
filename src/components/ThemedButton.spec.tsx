@@ -1,7 +1,7 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import userEvent from '@testing-library/user-event';
+
 import ThemedButton from './ThemedButton';
 
 describe('ThemedButton Component', () => {
@@ -17,7 +17,7 @@ describe('ThemedButton Component', () => {
       const lightModeIcon = screen.getByTestId('light-button');
       expect(lightModeIcon).toBeInTheDocument();
 
-      fireEvent.click(lightModeIcon);
+      userEvent.click(lightModeIcon);
 
       setTimeout(() => {
         expect(darkModeIcon).toBeInTheDocument();
