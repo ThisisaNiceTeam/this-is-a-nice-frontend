@@ -14,6 +14,8 @@ declare module '@emotion/react' {
       secondary: string;
       accent: string;
       select: string;
+      home: string;
+      gradient: string;
     };
 
     icon: {

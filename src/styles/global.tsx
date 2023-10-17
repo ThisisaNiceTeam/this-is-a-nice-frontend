@@ -6,6 +6,7 @@ const style = () => css`
   body {
     margin: 0;
     padding: 0;
+    background-color: var(--bg-home);
   }
 
   [data-theme='dark'] {
@@ -18,6 +19,8 @@ const style = () => css`
     --bg-secondary: ${theme.darkTheme.background.secondary};
     --bg-accent: ${theme.darkTheme.background.accent};
     --bg-select: ${theme.darkTheme.background.select};
+    --bg-home: ${theme.darkTheme.background.home};
+    --bg-gradient: ${theme.darkTheme.background.gradient};
 
     --icon-primary: ${theme.darkTheme.icon.primary};
     --icon-secondary: ${theme.darkTheme.icon.secondary};
@@ -40,6 +43,8 @@ const style = () => css`
     --bg-secondary: ${theme.lightTheme.background.secondary};
     --bg-accent: ${theme.lightTheme.background.accent};
     --bg-select: ${theme.lightTheme.background.select};
+    --bg-home: ${theme.lightTheme.background.home};
+    --bg-gradient: ${theme.lightTheme.background.gradient};
 
     --icon-primary: ${theme.lightTheme.icon.primary};
     --icon-secondary: ${theme.lightTheme.icon.secondary};

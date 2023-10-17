@@ -26,6 +26,12 @@ const background = {
 
   'select-light': '#ffffff',
   'select-dark': '#313136',
+
+  'home-light': '#ffffff',
+  'home-dark': '#202026',
+
+  'home-gradient-light': '#c7d4e5',
+  'home-gradient-dark': '#000000',
 };
 
 const icon = {
@@ -68,6 +74,8 @@ const lightTheme: Theme = {
     secondary: background['secondary-light'],
     accent: background['accent-light'],
     select: background['select-light'],
+    home: background['home-light'],
+    gradient: background['home-gradient-light'],
   },
 
   icon: {
@@ -100,6 +108,8 @@ const darkTheme: Theme = {
     secondary: background['secondary-dark'],
     accent: background['accent-dark'],
     select: background['select-dark'],
+    home: background['home-dark'],
+    gradient: background['home-gradient-dark'],
   },
 
   icon: {
