@@ -21,7 +21,7 @@
 
 - event 검증시에는 userEvent를 사용한다.
 - element에 접근할 때 적절한 함수를 사용한다. [Get, Find, Query 차이](https://velog.io/@onejuice98/React-Testing-library-get-find-query-%EA%B5%AC%EB%B6%84%ED%95%98%EA%B8%B0)
--
+
 
 ### Example
 
