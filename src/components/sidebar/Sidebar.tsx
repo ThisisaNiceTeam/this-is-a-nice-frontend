@@ -31,6 +31,10 @@ const SidebarWrapper = styled.aside<{ isOpen: boolean }>`
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
   justify-content: space-between;
+
+  @media screen and (max-width: 768px) {
+    min-width: 80%;
+  }
 `;
 
 const FoldingButton = styled.button<{ isOpen: boolean }>`
@@ -40,6 +44,10 @@ const FoldingButton = styled.button<{ isOpen: boolean }>`
   right: ${(props) => props.isOpen && '-8%'};
   left: ${(props) => !props.isOpen && '-8%'};
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    left: ${(props) => !props.isOpen && '-5%'};
+  }
 `;
 
 const TopContainer = styled.div`

@@ -17,6 +17,10 @@ const ChatMainWrapper = styled.main`
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 4rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const ChatContent = () => {
