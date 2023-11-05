@@ -8,6 +8,12 @@ dependencies:
   '@emotion-icons/material':
     specifier: ^3.14.0
     version: 3.14.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
+  '@emotion-icons/material-outlined':
+    specifier: ^3.14.0
+    version: 3.14.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
+  '@emotion-icons/material-rounded':
+    specifier: ^3.14.0
+    version: 3.14.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
   '@emotion/babel-preset-css-prop':
     specifier: ^11.11.0
     version: 11.11.0(@babel/core@7.23.0)
@@ -32,6 +38,9 @@ dependencies:
   '@types/react-dom':
     specifier: 18.2.7
     version: 18.2.7
+  emotion-normalize:
+    specifier: ^11.0.1
+    version: 11.0.1(@emotion/react@11.11.1)(react@18.2.0)
   eslint:
     specifier: 8.48.0
     version: 8.48.0
@@ -1406,6 +1415,34 @@ packages:
       react: '*'
     dependencies:
       '@babel/runtime': 7.22.15
+      '@emotion/react': 11.11.1(@types/react@18.2.21)(react@18.2.0)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.21)(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
+  /@emotion-icons/material-outlined@3.14.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0):
+    resolution: {integrity: sha512-Y4YS4OLPbu5ytN9XjB+7duM5pkkofUhr6YqBlta1Fer6dMHTMKy9GnnDyqGPJ/jYxS+6keVmL8WcTzWYHzQktA==}
+    peerDependencies:
+      '@emotion/react': '>=11.0.0 <12'
+      '@emotion/styled': '>=11.0.0 <12'
+      react: '*'
+    dependencies:
+      '@babel/runtime': 7.22.15
+      '@emotion-icons/emotion-icon': 4.1.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
+      '@emotion/react': 11.11.1(@types/react@18.2.21)(react@18.2.0)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.21)(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
+  /@emotion-icons/material-rounded@3.14.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0):
+    resolution: {integrity: sha512-uMGajIPbTzYcqbJVBOypWA6kbl/6Hi3Z0qo7VONi6U5r5BOfxcMVgXKydBGI4qqy07oEnR/TDoOzgDT/XWKl1Q==}
+    peerDependencies:
+      '@emotion/react': '>=11.0.0 <12'
+      '@emotion/styled': '>=11.0.0 <12'
+      react: '*'
+    dependencies:
+      '@babel/runtime': 7.22.15
+      '@emotion-icons/emotion-icon': 4.1.0(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
       '@emotion/react': 11.11.1(@types/react@18.2.21)(react@18.2.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.21)(react@18.2.0)
       react: 18.2.0
@@ -3386,6 +3423,16 @@ packages:
 
   /emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
+
+  /emotion-normalize@11.0.1(@emotion/react@11.11.1)(react@18.2.0):
+    resolution: {integrity: sha512-68+TdnChNbELbOVtA2oOdSc9W40KPH4dKYdXgk2KfkuGu+qK7glVVO4h5Q+hoAf2JqJfTV55wPeBMPuun+3fVA==}
+    peerDependencies:
+      '@emotion/react': ^11.0.0
+      react: '>=16.3.0'
+    dependencies:
+      '@emotion/react': 11.11.1(@types/react@18.2.21)(react@18.2.0)
+      react: 18.2.0
+    dev: false
 
   /enhanced-resolve@5.15.0:
     resolution: {integrity: sha512-LXYT42KJ7lpIKECr2mAXIaMldcNCh/7E0KBKOu4KSfkHmP+mZmSs+8V5gBAqisWBy0OO4W5Oyys0GO1Y8KtdKg==}
