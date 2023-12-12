@@ -20,6 +20,7 @@ const Title = styled.div`
   padding-top: 10vh;
   text-align: center;
   font-size: 2rem;
+  color: var(--text-primary);
   @media (min-width: 600px) {
     font-size: 4.125rem;
   }
@@ -123,7 +124,7 @@ const HomeContent = () => {
         </ChatWrapper>
 
         <MoreButton>
-          <ExpandMore width={50} />
+          <ExpandMore width={50} style={{ color: 'var(--icon-secondary)' }} />
         </MoreButton>
       </TitleWrapper>
     </HomeElement>
