@@ -6,9 +6,15 @@ import type { Metadata } from 'next';
 import Provider from '@/app/Provider';
 
 export const metadata: Metadata = {
-  title: 'SSAFY random chat',
+  title: 'SSAFY LIVE',
   description: 'This is random chat application for SSAFY 10th',
 };
+
+declare global {
+  interface Window {
+    Kakao: any;
+  }
+}
 
 interface Props {
   children: React.ReactNode;
