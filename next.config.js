@@ -9,6 +9,14 @@ const nextConfig = {
 
     return config;
   },
+  async rewrites() {
+    return [
+      {
+        source: '/:path*',
+        destination: 'http://3.38.14.200:8080/:path*',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
