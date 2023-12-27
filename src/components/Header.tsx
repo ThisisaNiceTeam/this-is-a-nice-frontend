@@ -34,18 +34,12 @@ const RightElement = styled.div`
   align-items: center;
 `;
 
-const SignIn = styled.span`
-  margin-right: 1rem;
-  cursor: pointer;
-`;
-
 const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderContent>
         <HomeButton />
         <RightElement>
-          <SignIn>시작하기</SignIn>
           <Login />
           <ThemedButton />
         </RightElement>
