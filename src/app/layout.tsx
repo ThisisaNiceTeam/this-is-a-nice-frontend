@@ -1,4 +1,5 @@
 import React from 'react';
+import localFont from 'next/font/local';
 
 import type { Metadata } from 'next';
 
@@ -9,13 +10,20 @@ export const metadata: Metadata = {
   description: 'This is random chat application for SSAFY 10th',
 };
 
+const pretendard = localFont({
+  src: './fonts/PretendardVariable.woff2',
+  display: 'swap',
+  variable: '--font-pretendard',
+  preload: true,
+});
+
 interface Props {
   children: React.ReactNode;
 }
 
 const RootLayout = ({ children }: Props) => {
   return (
-    <html lang='en'>
+    <html lang='en' className={pretendard.className} suppressHydrationWarning>
       <body>
         <Provider>{children}</Provider>
       </body>
