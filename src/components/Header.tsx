@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 import HomeButton from '@/components/HomeButton';
 import ThemedButton from '@/components/ThemedButton';
+import Login from '@/components/login/Login';
 
 const HeaderWrapper = styled.div`
   width: 100%;
@@ -33,18 +34,13 @@ const RightElement = styled.div`
   align-items: center;
 `;
 
-const SignIn = styled.span`
-  margin-right: 1rem;
-  cursor: pointer;
-`;
-
 const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderContent>
         <HomeButton />
         <RightElement>
-          <SignIn>시작하기</SignIn>
+          <Login />
           <ThemedButton />
         </RightElement>
       </HeaderContent>

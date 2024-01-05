@@ -24,7 +24,7 @@ const HomeButton = () => {
   return (
     <Button onClick={() => router.push('/')}>
       <Image src='/svgs/logo.svg' alt='logo' width={40} height={40} />
-      <SiteName>사이트 이름</SiteName>
+      <SiteName>싸피라이브</SiteName>
     </Button>
   );
 };

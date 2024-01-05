@@ -13,7 +13,7 @@ describe('HomeButton', () => {
     render();
 
     const logo = screen.getByAltText('logo');
-    const title = screen.getByText('사이트 이름');
+    const title = screen.getByText('싸피라이브');
 
     expect(logo).toBeInTheDocument();
     expect(title).toBeInTheDocument();
