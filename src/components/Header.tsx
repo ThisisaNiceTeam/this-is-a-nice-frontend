@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 
 import HomeButton from '@/components/HomeButton';
 import ThemedButton from '@/components/ThemedButton';
-import Login from '@/components/login/login';
+import Login from '@/components/login/Login';
 
 const HeaderWrapper = styled.div`
   width: 100%;
