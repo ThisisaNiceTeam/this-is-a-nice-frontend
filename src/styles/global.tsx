@@ -71,6 +71,7 @@ const style = () => css`
     --bg-select: ${theme.darkTheme.background.select};
     --bg-home: ${theme.darkTheme.background.home};
     --bg-gradient: ${theme.darkTheme.background.gradient};
+    --bg-gradient-darker: ${theme.darkTheme.background.gradientDark};
 
     --icon-primary: ${theme.darkTheme.icon.primary};
     --icon-secondary: ${theme.darkTheme.icon.secondary};
@@ -95,6 +96,7 @@ const style = () => css`
     --bg-select: ${theme.lightTheme.background.select};
     --bg-home: ${theme.lightTheme.background.home};
     --bg-gradient: ${theme.lightTheme.background.gradient};
+    --bg-gradient-darker: ${theme.lightTheme.background.gradientDark};
 
     --icon-primary: ${theme.lightTheme.icon.primary};
     --icon-secondary: ${theme.lightTheme.icon.secondary};

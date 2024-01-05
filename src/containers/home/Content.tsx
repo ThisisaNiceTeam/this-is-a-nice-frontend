@@ -17,10 +17,13 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 10vh;
+  margin-top: 5vh;
   text-align: center;
   font-size: 2rem;
   color: var(--text-primary);
+  @media (min-width: 1600px) {
+    margin-top: 10vh;
+  }
   @media (min-width: 600px) {
     font-size: 4.125rem;
   }

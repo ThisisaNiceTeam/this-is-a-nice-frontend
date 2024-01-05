@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
+import Link from 'next/link';
 
 const redirectUri = `http://localhost:3000/oauth`;
 
 const Login = () => {
-  const Button = styled.button`
+  const NaverLoginLink = styled(Link)`
     display: flex;
     align-items: center;
     border: 0;
@@ -12,11 +13,13 @@ const Login = () => {
     margin-right: 1rem;
   `;
 
-  const naverLoginHandler = () => {
-    window.location.href = `https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${process.env.NEXT_PUBLIC_NAVER_CLIENT_ID}&redirect_uri=${redirectUri}&state=thisisnicestate`;
-  };
-
-  return <Button onClick={naverLoginHandler}>시작하기</Button>;
+  return (
+    <NaverLoginLink
+      href={`https://nid.naver.com/oauth2.0/authorize?response_type=code&client_id=${process.env.NEXT_PUBLIC_NAVER_CLIENT_ID}&redirect_uri=${redirectUri}&state=thisisnicestate`}
+    >
+      시작하기
+    </NaverLoginLink>
+  );
 };
 
 export default Login;
