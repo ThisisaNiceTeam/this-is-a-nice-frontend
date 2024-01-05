@@ -1,8 +1,9 @@
 # this-is-a-nice-frontend
 This is a nice team's frontend repository.
 ### Description
+
+![ssafylive](https://github.com/ThisisaNiceTeam/this-is-a-nice-frontend/assets/28244235/60d1ecdc-1f7c-4a9e-9d36-47e8f31cf2d2)
 <p align='center'>
-    <img src='./public/images/FirstPage.png' alt='FirstPage' />
     채팅 첫 화면
 </p>
 
