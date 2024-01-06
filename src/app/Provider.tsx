@@ -2,6 +2,7 @@
 
 import { ReactNode } from 'react';
 import { ThemeProvider } from 'next-themes';
+import { RecoilRoot } from 'recoil';
 
 import GlobalStyle from '@/styles/global';
 
@@ -12,7 +13,9 @@ const Provider = ({ children }: Props) => {
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider defaultTheme='light'>{children}</ThemeProvider>
+      <RecoilRoot>
+        <ThemeProvider defaultTheme='light'>{children}</ThemeProvider>
+      </RecoilRoot>
     </>
   );
 };
