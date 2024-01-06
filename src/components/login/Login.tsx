@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
-const redirectUri = `http://localhost:3000/oauth`;
+const redirectUri = process.env.NEXT_PUBLIC_NAVER_LOGIN_REDIRECT_URI;
 
 const Login = () => {
   const NaverLoginLink = styled(Link)`
