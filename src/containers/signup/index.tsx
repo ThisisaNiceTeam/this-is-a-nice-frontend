@@ -2,8 +2,13 @@
 
 import styled from '@emotion/styled';
 import { FormEvent } from 'react';
+import { useRecoilState } from 'recoil';
+
+import { User, userState } from '@/types/user';
 
 const Signup = () => {
+  const [user, setUser] = useRecoilState(userState);
+
   const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
@@ -12,7 +17,7 @@ const Signup = () => {
       const name = formData.get('name') as string;
       const region = formData.get('region') as string;
       const classRoom = formData.get('classRoom') as string;
-      const token = localStorage.getItem('naver-access-token') as string;
+      const token = user.naverAccessToken as string;
 
       const request = JSON.stringify({
         name,
@@ -37,11 +42,17 @@ const Signup = () => {
           window.location.href = `/`;
         })
         .then((data) => {
-          const { refreshToken, accessToken } = data;
+          const { nickname, refreshToken, accessToken } = data;
 
+          // refresh token이 있다면 회원가입에 성공
           if (refreshToken) {
-            localStorage.setItem('refresh-token', refreshToken);
-            localStorage.setItem('access-token', accessToken);
+            const signupUser: User = {
+              nickname,
+              refreshToken,
+              accessToken,
+              isMember: true,
+            };
+            setUser({ ...signupUser, naverAccessToken: null });
             window.location.href = `/`;
           } else {
             alert('회원가입 실패');
