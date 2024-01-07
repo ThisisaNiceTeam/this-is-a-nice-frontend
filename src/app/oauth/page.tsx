@@ -4,8 +4,13 @@ import { useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import { useRecoilState } from 'recoil';
+
+import { User, userState } from '@/types/user';
 
 const OAuth = () => {
+  const [user, setUser] = useRecoilState(userState);
+
   const searchParams = useSearchParams();
   const authCode = searchParams.get('code'); // 인가 코드가 저장되는 변수
   const authState = searchParams.get('state');
@@ -28,21 +33,28 @@ const OAuth = () => {
         window.location.href = `/`;
       })
       .then((data) => {
-        const { refreshToken, accessToken, naverAccessToken } = data;
+        const { nickname, refreshToken, accessToken, naverAccessToken } = data;
 
         // 네이버 로그인 성공, 이미 회원 가입한 사용자
         if (refreshToken) {
-          localStorage.setItem('refresh-token', refreshToken);
-          localStorage.setItem('access-token', accessToken);
+          const alreadyUser: User = {
+            nickname,
+            refreshToken,
+            accessToken,
+            isMember: true,
+          };
+          setUser(alreadyUser);
           window.location.href = `/`;
         }
         // 네이버 로그인 성공, 회원 가입이 되지 않은 사용자
         else if (naverAccessToken) {
-          // 이미 토큰이 로컬 스토리지에 있을 경우, 로컬 스토리지에서 제거
-          if (localStorage.getItem('naver-access-token')) {
-            localStorage.removeItem('naver-access-token');
-          }
-          localStorage.setItem('naver-access-token', naverAccessToken);
+          const needToSignupUser: User = {
+            nickname,
+            naverAccessToken,
+            isMember: false,
+          };
+          // TODO: 토큰이 이미 있을 경우 제거해야 하는지 체크
+          setUser(needToSignupUser);
           window.location.href = `/signup`;
         }
         // 네이버 로그인 실패
