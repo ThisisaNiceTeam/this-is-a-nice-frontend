@@ -15,12 +15,14 @@ const Signup = () => {
 
     if (formData) {
       const name = formData.get('name') as string;
+      const nickname = formData.get('nickname') as string;
       const region = formData.get('region') as string;
       const classRoom = formData.get('classRoom') as string;
       const token = user.naverAccessToken as string;
 
       const request = JSON.stringify({
         name,
+        nickname,
         region,
         classRoom,
         token,
@@ -42,12 +44,12 @@ const Signup = () => {
           window.location.href = `/`;
         })
         .then((data) => {
-          const { nickname, refreshToken, accessToken } = data;
+          const { nickname: currentNickname, refreshToken, accessToken } = data;
 
           // refresh token이 있다면 회원가입에 성공
           if (refreshToken) {
             const signupUser: User = {
-              nickname,
+              nickname: currentNickname,
               refreshToken,
               accessToken,
               isMember: true,
@@ -59,7 +61,7 @@ const Signup = () => {
             window.location.href = `/`;
           }
         });
-      window.location.href = `/`;
+      // window.location.href = `/`;
     }
   };
 
@@ -80,13 +82,14 @@ const Signup = () => {
     height: 600px;
     width: 400px;
     margin: 0 auto;
-    padding: 56px;
+    padding: 0 56px;
     background-color: var(--bg-select);
     border-radius: 30px;
   `;
 
   const SignupTitle = styled.div`
     text-align: center;
+    margin-top: 50px;
     font-size: 2rem;
     color: var(--text-primary);
   `;
@@ -95,24 +98,24 @@ const Signup = () => {
     border: 2px solid var(--text-primary);
     width: 50%;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 10px;
   `;
 
   const Form = styled.form`
     //display: block;
-    margin-top: 50px;
+    margin-top: 32px;
   `;
 
   const Label = styled.label`
     display: block;
-    margin-top: 20px;
+    margin-top: 16px;
     color: var(--text-primary);
   `;
 
   const TextInput = styled.input`
     display: block;
     width: 288px;
-    height: 48px;
+    height: 40px;
     border: 1px solid var(--outline-primary);
     padding: 6px 12px;
     margin-top: 4px;
@@ -127,7 +130,7 @@ const Signup = () => {
   const TextSelect = styled.select`
     display: block;
     width: 288px;
-    height: 48px;
+    height: 40px;
     border: 1px solid var(--outline-primary);
     padding: 6px 12px;
     margin-top: 4px;
@@ -174,6 +177,10 @@ const Signup = () => {
           <Label>
             이름
             <TextInput name='name' type='text' placeholder='실명을 입력해주세요.' />
+          </Label>
+          <Label>
+            닉네임
+            <TextInput name='nickname' type='text' placeholder='사용할 닉네임을 입력해주세요.' />
           </Label>
           <Label>
             지역
